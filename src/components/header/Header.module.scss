@@ -1,0 +1,65 @@
+.headerbg {
+    padding: 10px 0px;
+    border: 1px solid #eee;
+    box-shadow: -1px 2px 2px -1px #efefef;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo_container img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo_container {
+    cursor: pointer;
+}
+
+header .logo_container span {
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    top: 16px;
+}
+
+.profile_logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+//navbar...
+.navbarbg {
+    background-color: #333333;
+    padding: 10px 0;
+}
+
+.navbar {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .watchlist {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+    cursor: pointer;
+}

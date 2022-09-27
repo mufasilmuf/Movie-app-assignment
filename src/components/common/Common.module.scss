@@ -1,0 +1,31 @@
+//search bar...
+// .SearchBar input {
+//     height: 32px;
+//     width: 300px;
+//     padding: 0 5px;
+//     border-radius: 4px;
+//     font-size: 14px;
+//     border: none;
+//     background-color: #f9f9f9;
+// }
+
+// .SearchBar input:focus {
+//     outline: 1px solid blue;
+// }
+
+//card....
+.card {
+    background-color: #f9f9f9;
+    width: 230px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.card img {
+    width: 100%;
+    height: 330px;
+}
+
+.card .card_details {
+    padding: 5px 10px;
+}
