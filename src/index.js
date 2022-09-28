@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 
 import './index.scss';
 import App from './App';
+import ContextWrapper from './context/ContextWrapper';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ContextWrapper>
+      <App />
+    </ContextWrapper>
   </React.StrictMode>
 );
 
