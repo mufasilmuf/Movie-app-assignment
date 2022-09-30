@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import NavStyle from "./Header.module.scss";
 
@@ -6,12 +7,7 @@ const Navbar = () => {
     return (
         <nav className={NavStyle.navbarbg}>
             <div className={`${NavStyle.navbar} container`}>
-                <div className={NavStyle.watchlist}>WatchList</div>
-                <ul>
-                    <li>sort by</li>
-                    <li>grid</li>
-                    <li>list</li>
-                </ul>
+                <div className={NavStyle.watchlist}><Link to='/watchlist'>WatchList</Link></div>
             </div>
         </nav>
     )

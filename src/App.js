@@ -7,13 +7,14 @@ import GlobalContext from './context/GlobalContext';
 import Routers from './Routers';
 
 function App() {
-  const { setMovieData, setLoader } = useContext(GlobalContext);
+  const { setMovieData, setLoader, setFilterMovieData } = useContext(GlobalContext);
 
   useEffect(() => {
     setLoader(true);
     axios.get('https://api.jikan.moe/v4/anime')
       .then((response) => {
         setMovieData(response.data.data);
+        setFilterMovieData(response.data.data)
         setLoader(false);
       })
   }, []);

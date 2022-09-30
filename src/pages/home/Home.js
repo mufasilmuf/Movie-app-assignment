@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 
 import Cards from '../../components/common/Cards';
 import Filter from '../../components/common/Filter';
@@ -8,9 +7,11 @@ import Header from '../../components/header/Header';
 import Navbar from '../../components/header/Navbar';
 import Loader from "../../components/common/Loader";
 import GlobalContext from '../../context/GlobalContext';
+import CustomModal from '../../components/common/CustomModal';
+import { isEmpty } from 'lodash';
 
 const Home = () => {
-    const { movieData, loader, geners } = useContext(GlobalContext);
+    const { filterMovieData, loader, geners, modalState } = useContext(GlobalContext);
 
     return (
         <React.Fragment>
@@ -22,12 +23,15 @@ const Home = () => {
                     <Filter name='filter by genres' option={geners} />
                 </div>
                 {loader && <Loader />}
-                <div className='home-section'>
-                    {movieData.map((movie) => (
-                        <Cards posterImage={movie.images.webp.image_url} title={movie.title} rating={movie.score} />
-                    ))}
-                </div>
+                {isEmpty(filterMovieData) && !loader ? <p className='empty-message'>Result Not Found!</p> :
+                    <div className='home-section'>
+                        {filterMovieData.map((movie, index) => (
+                            <Cards posterImage={movie.images.webp.image_url} title={movie.title} rating={movie.score} id={movie.mal_id} status={movie.airing} key={index} />
+                        ))}
+                    </div>
+                }
             </section>
+            {modalState && <CustomModal message="You like to remove this Movie form Watch List" />}
         </React.Fragment>
     )
 }

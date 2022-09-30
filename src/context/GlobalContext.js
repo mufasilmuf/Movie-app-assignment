@@ -6,7 +6,17 @@ const GlobalContext = React.createContext({
     loader: false,
     setLoader: (status) => { },
     geners: [],
-    setGeners: (gener) => { }
+    setGeners: (gener) => { },
+    filterMovieData: [],
+    setFilterMovieData: (data) => { },
+    watchList: [],
+    setWatchList: (data) => { },
+    addList: [],
+    dispatcht: (type, payload) => { },
+    modalState: false,
+    setModalState: (status) => { },
+    isList: false,
+    setIsList: (status) => { }
 });
 
 export default GlobalContext;

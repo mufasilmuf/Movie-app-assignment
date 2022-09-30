@@ -8,9 +8,9 @@ const Filter = (props) => {
     return (
         <div className={CommonStyle.fiterBox}>
             <select name={name} className="form-control">
-                <option value="volvo" disabled>{name}</option>
+                <option value="" disabled>{name}</option>
                 {option.map((value) => (
-                    <option value={value} key={value}>{value.genres}</option>
+                    <option value={value.genres} key={value.genres}>{value.genres}</option>
                 ))}
             </select>
         </div>

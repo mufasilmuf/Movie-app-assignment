@@ -95,3 +95,67 @@
         transform: rotate(360deg);
     }
 }
+
+//custom modal...
+.Modal_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Modal {
+    width: 300px;
+    height: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    box-shadow: -1px 2px 2px -1px #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Modal p {
+    text-align: center;
+    font-weight: 500;
+}
+
+.Modal .Modal_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Modal_footer button {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.Modal_footer .btn_cancel {
+    background-color: red;
+}
+
+.Modal_footer .btn_ok {
+    background-color: green;
+}
+
+@media(max-width:1200px) {
+    .SearchBar input {
+        font-size: 16px;
+        border: 1px solid #dadbda;
+        width: 100%;
+    }
+
+    .fiterBox {
+        margin-top: 25px;
+    }
+}

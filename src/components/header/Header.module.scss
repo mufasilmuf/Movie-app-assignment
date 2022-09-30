@@ -20,6 +20,7 @@
 }
 
 header .logo_container span {
+    color: #000;
     font-size: 24px;
     font-weight: 500;
     position: absolute;
@@ -62,4 +63,9 @@ header .logo_container span {
 .navbar ul li {
     margin-left: 25px;
     cursor: pointer;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
 }
